@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import useGlobalReducer from "../hooks/useGlobalReducer";
+
 export const CardPlanet = ({ planet }) => {
     const { store, dispatch } = useGlobalReducer();
     const isFavorite = store.favorites.some(fav => fav.type === 'planet' && fav.id === planet.uid);
