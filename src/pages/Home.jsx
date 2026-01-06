@@ -25,7 +25,7 @@ export const Home = () => {
                     return {
                         ...char,
                         ...detailData.result,
-                        image: detailData.result.properties?.image // 👈 OBTÉN LA IMAGEN AQUÍ
+                        image: `https://starwars-visualguide.com/assets/img/characters/${char.uid}.jpg`
                     };
                 })
             );
@@ -48,7 +48,7 @@ export const Home = () => {
                     return {
                         ...vehicle,
                         ...detailData.result,
-                        image: detailData.result.properties?.image // 👈
+                        image: `https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`
                     };
                 })
             );
@@ -71,7 +71,7 @@ export const Home = () => {
                     return {
                         ...planet,
                         ...detailData.result,
-                        image: detailData.result.properties?.image // 👈
+                        image: `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
                     };
                 })
             );

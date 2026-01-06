@@ -50,7 +50,7 @@ export const CharacterDetail = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img
-                        src={character?.properties?.image || `https://dummyimage.com/400x600/cccccc/000000?text=No+Image`}
+                        src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
                         className="img-fluid rounded"
                         alt={props.name}
                         onError={(e) => {

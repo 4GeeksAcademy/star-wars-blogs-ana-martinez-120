@@ -24,15 +24,15 @@ export const VehicleDetail = () => {
 
     const toggleFavorite = () => {
         if (isFavorite) {
-            dispatch({ type: 'REMOVE_FAVORITE', payload: { type: 'character', id: parseInt(id) } });
+            dispatch({ type: 'REMOVE_FAVORITE', payload: { type: 'vehicle', id: parseInt(id) } });
         } else {
             dispatch({
                 type: 'ADD_FAVORITE',
                 payload: {
-                    type: 'character',
+                    type: 'vehicle',
                     id: parseInt(id),
-                    name: character?.properties?.name,
-                    image: character?.properties?.image || `https://starwars-visualguide.com/assets/img/characters/${id}.jpg` // Fallback
+                    name: vehicle?.properties?.name,
+                    image: `https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`
                 }
             });
         }
@@ -51,7 +51,7 @@ export const VehicleDetail = () => {
             <div className="row">
                 <div className="col-md-4">
                     <img
-                        src={planet?.properties?.image || `https://dummyimage.com/400x600/cccccc/000000?text=No+Image`}
+                        src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`}
                         className="img-fluid rounded"
                         alt={props.name}
                         onError={(e) => {
